@@ -90,11 +90,11 @@ export async function action({ request, params }) {
     date: data.get("date"),
     description: data.get("description"),
   };
-  let url = "http://localhost:8080/events";
+  let url = "https://backend-whk3h6z34q-ue.a.run.app/events/";
 
   if (method === "PATCH") {
     const eventId = params.eventId;
-    url = "http://localhost:8080/events/" + eventId;
+    url = "https://backend-whk3h6z34q-ue.a.run.app/events/" + eventId;
   }
   const response = await fetch(url, {
     method: method,
