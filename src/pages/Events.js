@@ -19,7 +19,7 @@ function EventsPage() {
 export default EventsPage;
 
 async function loadEvents() {
-  const response = await fetch("https://backend-whk3h6z34q-ue.a.run.app/events/");
+  const response = await fetch("https://thematic-cursor-420615.ue.r.appspot.com/events/");
 
   if (!response.ok) {
     // return {isError:true, message:'Could not fetch events.'};

@@ -90,15 +90,15 @@ export async function action({ request, params }) {
     date: data.get("date"),
     description: data.get("description"),
   };
-  let url = "https://backend-whk3h6z34q-ue.a.run.app/events/";
+  let url = "https://thematic-cursor-420615.ue.r.appspot.com/events/";
 
   if (method === "PATCH") {
     const eventId = params.eventId;
-    url = "https://backend-whk3h6z34q-ue.a.run.app/events/" + eventId;
+    url = "https://thematic-cursor-420615.ue.r.appspot.com/events/" + eventId;
   }
   const response = await fetch(url, {
     method: method,
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json"},
     body: JSON.stringify(eventData),
   });
   if (response.status === 422) {

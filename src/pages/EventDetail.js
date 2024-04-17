@@ -30,7 +30,7 @@ const EventDetailPage = () => {
 export default EventDetailPage;
 
 async function loadEvent(id) {
-  const response = await fetch("https://backend-whk3h6z34q-ue.a.run.app/events/" + id);
+  const response = await fetch("https://thematic-cursor-420615.ue.r.appspot.com/events/" + id);
   if (!response.ok) {
     throw json(
       { message: "Could not fetch details for selected event" },
@@ -43,7 +43,7 @@ async function loadEvent(id) {
 }
 
 async function loadEvents() {
-  const response = await fetch("https://backend-whk3h6z34q-ue.a.run.app/events");
+  const response = await fetch("https://thematic-cursor-420615.ue.r.appspot.com/events");
 
   if (!response.ok) {
     // return {isError:true, message:'Could not fetch events.'};
